@@ -21,6 +21,10 @@ const PORT = process.env.PORT || 3001;
 //   useFindAndModify: false,
 // });
 
+
+// TESTING 123
+
+
 // app.use(
 //   session({
 //     secret: "key",
@@ -35,16 +39,14 @@ const PORT = process.env.PORT || 3001;
 // app.use(routes);
 
 // If our node environment is production we will serve up our static assets from the build folder
-if (process.env.NODE_ENV === "production") {
-  // The react app is called 'client' and we are accessing the build folder that is initialized in the postbuild scripts.
-  app.use(express.static("client/build"));
-}
-app.use(express.static("client/build"));
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+// }
+// app.use(express.static("client/build"));
+// app.get("*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
-// Start the server
-app.listen(PORT, function () {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-});
+// app.listen(PORT, function () {
+//   console.log(`🌎 ==> API server now on port ${PORT}!`);
+// });
